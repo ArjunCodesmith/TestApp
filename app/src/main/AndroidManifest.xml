@@ -7,12 +7,14 @@
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="My Simple Keyboard">
+        android:label="My Simple Keyboard"
+        android:theme="@style/Theme.AppCompat.Light">
 
         <service
             android:name=".SimpleKeyboard"
             android:permission="android.permission.BIND_INPUT_METHOD"
-            android:exported="true">
+            android:exported="true"
+            android:label="Simple Keyboard">
             <intent-filter>
                 <action android:name="android.view.InputMethod" />
             </intent-filter>
