@@ -32,9 +32,6 @@ jobs:
           echo "Gradle wrapper missing, using alternative approach..."
         fi
 
-    - name: Setup Android SDK
-      uses: android-actions/setup-android@v3
-
     - name: Validate Gradle Wrapper
       run: |
         # Check if we can run gradle tasks
