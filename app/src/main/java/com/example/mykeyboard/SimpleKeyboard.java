@@ -1,4 +1,4 @@
-herepackage com.example.mykeyboard;
+package com.example.mykeyboard;
 
 import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
@@ -23,16 +23,9 @@ public class SimpleKeyboard extends InputMethodService
     }
 
     @Override
-    public void onPress(int primaryCode) {
-    }
-
-    @Override
-    public void onRelease(int primaryCode) {
-    }
-
-    @Override
     public void onKey(int primaryCode, int[] keyCodes) {
         InputConnection ic = getCurrentInputConnection();
+        if (ic == null) return;
         
         switch(primaryCode) {
             case Keyboard.KEYCODE_DELETE:
@@ -47,23 +40,12 @@ public class SimpleKeyboard extends InputMethodService
         }
     }
 
-    @Override
-    public void onText(CharSequence text) {
-    }
-
-    @Override
-    public void swipeLeft() {
-    }
-
-    @Override
-    public void swipeRight() {
-    }
-
-    @Override
-    public void swipeDown() {
-    }
-
-    @Override
-    public void swipeUp() {
-    }
+    // Other required methods (empty implementation)
+    @Override public void onPress(int primaryCode) {}
+    @Override public void onRelease(int primaryCode) {}
+    @Override public void onText(CharSequence text) {}
+    @Override public void swipeLeft() {}
+    @Override public void swipeRight() {}
+    @Override public void swipeDown() {}
+    @Override public void swipeUp() {}
         }
